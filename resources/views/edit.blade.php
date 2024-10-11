@@ -1,0 +1,31 @@
+@extends('layout')
+@section('title', 'แก้ไขงาน')
+
+@section('content')
+    <h2 class="text text-center py-2"> แก้ไขงาน</h2>
+    <form method="POST" action="{{route('update',$blog->id)}}">
+        @csrf
+        <div class="form-group">
+            <label for="title">ชื่องาน</label>
+            <input type="text" name="title"class="form-control" value="{{$blog->title}}">
+        </div>
+        @error('title')
+            <div class="my-2">
+                <span class="text text-danger">{{ $message }}</span>
+            </div>
+        @enderror
+        <div>
+            <div class="form-froup"></div>
+            <label for="content">รายละเอียดงาน</label>
+            <textarea name="content" cols="30" rows="5" class="form-control">{{$blog->content}}"</textarea>
+        </div>
+        
+        <input type="submit" value="บันทึก" class="btn btn-primary my-3">
+        <a href="/blog"class="btn btn-success">ดูงานทั้งหมด</a>
+        @error('content')
+            <div class="my-2">
+                <span class="text text-danger">{{ $message }}</span>
+            </div>
+        @enderror
+    </form>
+@endsection
