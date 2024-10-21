@@ -13,6 +13,7 @@
                 <th scope="col">ตรวจสอบงาน</th>
                 <th scope="col">ลบงาน</th>
                 <th scope="col">Test</th>
+                <th scope="col">Test2</th>
 
 
             </tr>
