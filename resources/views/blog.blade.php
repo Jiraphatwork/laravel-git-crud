@@ -12,6 +12,8 @@
                 <th scope="col">แก้ไขงาน</th>       
                 <th scope="col">ตรวจสอบงาน</th>
                 <th scope="col">ลบงาน</th>
+                <th scope="col">Test</th>
+
 
             </tr>
         </thead>

@@ -9,16 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void /**เพิ่มฟิลล์เข้าไปในDatabase */
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->text('content');
-            $table->boolean('status')->default(true);
-            $table->timestamps();
-         
-
+            $table->boolean('status')->default(true); /**ค่าความจริง 1หรือ0 */
+            $table->timestamps();     
+                  
+            
         });
     }
 

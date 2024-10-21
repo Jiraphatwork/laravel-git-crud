@@ -30,12 +30,14 @@ class Admincontroller extends Controller
         'content'=>'required'
         
         ],
+
         [
             'title.required'=>'กรุณาป้อนชื่อบทความ',
             'title.max'=>'ชื่อบทความไม่ควรเกิน50ตัวอักษร',
             'content.required'=>'กรุณาป้อนเนื้อหาบทความของคุณ'
         ]   
     );    
+    
     $data=[
         'title'=>$request->title,
         'content'=>$request->content
